@@ -9,10 +9,7 @@ const Work = () => {
       <h2 className="text-center text-5xl font-Ovo">My latest work </h2>
 
       <p className="text-center max-w-2xl mx-auto mt-5 mb-12 font-Ovo">
-        I am an experienced Frontend Developer with over a decade of
-        professional expertise in the field. Throughout my career, I have had
-        the privilege of collaborating with prestigious organizationsa,
-        contributing to their success and growth.
+        Welcome to my web development portfolio! Explore a collection of projects showcasing my expertise in web development.
       </p>
 
       <div className="grid grid-cols-auto my-10 gap-5">
