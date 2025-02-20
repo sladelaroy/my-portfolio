@@ -35,6 +35,10 @@ import right_arrow from './right-arrow.png';
 import send_icon from './send-icon.png';
 import right_arrow_bold from './right-arrow-bold.png';
 import right_arrow_bold_dark from './right-arrow-bold-dark.png';
+import work1 from './work1.png'
+import work2 from './work2.png'
+import work3 from './work3.png'
+import work4 from './work4.png'
 
 export const assets = {
     user_image,
@@ -80,22 +84,22 @@ export const workData = [
     {
         title: 'Frontend project',
         description: 'Web Design',
-        bgImage: '/work-1.png',
+        bgImage: '/work1.png',
     },
     {
         title: 'Geo based app',
         description: 'Mobile App',
-        bgImage: '/work-2.png',
+        bgImage: '/work2.png',
     },
     {
         title: 'Photography site',
         description: 'Web Design',
-        bgImage: '/work-3.png',
+        bgImage: '/work3.png',
     },
     {
         title: 'UI/UX designing',
         description: 'UI/UX Design',
-        bgImage: '/work-4.png',
+        bgImage: '/work4.png',
     },
 ]
 
