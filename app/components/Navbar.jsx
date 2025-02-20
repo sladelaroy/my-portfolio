@@ -1,23 +1,37 @@
 "use client";
 
-import React, { useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { assets } from "@/assets/assets";
 const Navbar = () => {
-
-  const sideMenuRef = useRef()
+  const sideMenuRef = useRef();
+  const [isScroll, setIsScroll] = useState(false);
   const openMenu = () => {
-    sideMenuRef.current.style.transform = 'translateX(-16rem)'
-  }
+    sideMenuRef.current.style.transform = "translateX(-16rem)";
+  };
   const closeMenu = () => {
-    sideMenuRef.current.style.transform = 'translateX(16rem)'
-  }
+    sideMenuRef.current.style.transform = "translateX(16rem)";
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      if (scrollY > 50) {
+        setIsScroll(true);
+      } else {
+        setIsScroll(false);
+      }
+    });
+  }, []);
   return (
     <>
       <div className="fixed top-0 right-0 w-11/12 -z-10 translate-y-[-80%]">
         <Image alt="" src={assets.header_bg_color} className="w-full" />
       </div>
-      <nav className="w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex justify-between items-center z-50">
+      <nav
+        className={`w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex justify-between items-center z-50 ${
+          isScroll ? "bg-white bg-opacity-50 backdrop-blur-lg shadow-sm" : ""
+        }`}
+      >
         <a href="#top">
           <Image
             alt=""
@@ -26,9 +40,9 @@ const Navbar = () => {
           />
         </a>
 
-        <ul 
-          className="hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3
-        bg-white shadow-sm bg-opacity-50"
+        <ul
+          className={`hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3
+        ${isScroll ? "" : "bg-white shadow-sm bg-opacity-50"}`}
         >
           <li className="font-Ovo">
             <a href="#top">Home</a>
@@ -63,12 +77,18 @@ const Navbar = () => {
           </button>
         </div>
 
-        <ul ref={sideMenuRef} className="flex md:hidden flex-col gap-4 py-20 px-10 fixed -right-64 top-0 bottom-0
-        w-64 z-50 h-screen bg-rose-50 transition duration-500">
-
-        <div className="absolute right-6 top-6" onClick={closeMenu}>
-          <Image className="w-5 cursor-pointer" src={assets.close_black} alt="" />
-        </div>
+        <ul
+          ref={sideMenuRef}
+          className="flex md:hidden flex-col gap-4 py-20 px-10 fixed -right-64 top-0 bottom-0
+        w-64 z-50 h-screen bg-rose-50 transition duration-500"
+        >
+          <div className="absolute right-6 top-6" onClick={closeMenu}>
+            <Image
+              className="w-5 cursor-pointer"
+              src={assets.close_black}
+              alt=""
+            />
+          </div>
 
           <li onClick={closeMenu} className="font-Ovo">
             <a href="#top">Home</a>
