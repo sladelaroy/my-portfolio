@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@next/swc-wasm-nodejs": "^15.1.7",
-    "@next/swc-win32-x64-msvc": "^15.1.7",
+    "@next/swc-linux-x64-gnu": "^15.1.7",
     "motion": "^12.4.7",
     "next": "15.1.7",
     "react": "^19.0.0",
