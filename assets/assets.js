@@ -97,7 +97,7 @@ export const workData = [
     title: "Tech Store",
     description: "Next.js Project",
     bgImage: "/work4.png", 
-    link: ""
+    link: "https://quick-cart-two-ochre.vercel.app/"
   },
   {
     title: "Fashion Shop",
