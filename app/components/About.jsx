@@ -39,7 +39,7 @@ const About = ({ isDarkMode }) => {
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6 }}
-          className="w-64 sm:w-80 rounded-3xl max-w-none"
+          className="w-64 sm:w-80 rounded-3xl max-w-none h-max"
         >
           <Image
             className="w-full rounded-3xl"
@@ -54,10 +54,7 @@ const About = ({ isDarkMode }) => {
           className="flex-1"
         >
           <p className="mb-10 max-w-2xl font-Ovo">
-            I am an experienced Frontend Developer with over a decade of
-            professional expertise in the field. Throughout my career, I have
-            had the privilege of collaborating with prestigious organizationsa,
-            contributing to their success and growth.
+          I'm an Adaptable and results-driven Full-Stack Developer with expertise in the MERN stack , building efficient, user-friendly applications . Skilled in both front-end and back-end development, problem-solving, and optimizing performance. Always eager to learn and tackle new challenges.
           </p>
           <motion.ul
             initial={{ opacity: 0 }}

@@ -44,7 +44,7 @@ const Work = ({ isDarkMode }) => {
       transition={{ duration: 0.9, delay: 0.6 }}
       className="grid grid-cols-auto my-10 gap-5 dark:text-black">
         {workData.map((project, index) => (
-          <motion.div
+          <motion.a target="_blank" href={project.link}
           whileHover={{scale: 1.05}}
           transition={{duration: 0.3}}
           
@@ -67,7 +67,7 @@ const Work = ({ isDarkMode }) => {
                 <Image alt="send icon" src={assets.send_icon} className="w-5" />
               </div>
             </div>
-          </motion.div>
+          </motion.a>
         ))}
       </motion.div>
 

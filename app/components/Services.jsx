@@ -3,7 +3,7 @@ import React from "react";
 import Image from "next/image";
 import { motion } from "motion/react";
 
-const Services = () => {
+const Services = ({isDarkMode}) => {
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -34,35 +34,32 @@ const Services = () => {
       whileInView={{ opacity: 1}}
       transition={{ duration: 0.5, delay: 0.7 }}
       className="text-center max-w-2xl mx-auto mt-5 mb-12 font-Ovo">
-        I am an experienced Frontend Developer with over a decade of
-        professional expertise in the field. Throughout my career, I have had
-        the privilege of collaborating with prestigious organizationsa,
-        contributing to their success and growth.
+        I develop scalable MERN stack applications, including web apps, APIs, and full-stack solutions. Expertise in React, Node.js, Express, and MongoDB for seamless user experiences.
       </motion.p>
       <motion.div 
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1}}
       transition={{ duration: 0.5, delay: 0.9 }}
       className="grid grid-cols-auto gap-6 my-10 ">
-        {serviceData.map(({ icon, title, description, link }, index) => (
+        {serviceData.map(({ icon, iconDark, title, description, link }, index) => (
           <motion.div
           whileInView={{scale: 1.05}}
             key={index}
-            className="border border-gray-400 rounded-lg px-8 py-12 
+            className="border border-gray-400 rounded-lg px-8 py-11 
             hover:shadow-black hover:-translate-y-1 duration-500 
             dark:hover:bg-darkHover dark:hover:shadow-white"
           >
-            <Image src={icon} alt="" className="w-10" />
+            <Image src={isDarkMode ? icon : iconDark} alt="" className="w-10" />
             <h3 className="text-lg my-4 text-gray-700 dark:text-white">
               {title}
             </h3>
             <p className="text-sm text-gray-500 leading-5 dark:text-white/80">
               {description}
             </p>
-            <a href={link} className="flex items-center gap-2 text-sm mt-5">
+            {/* <a href={link} className="flex items-center gap-2 text-sm mt-5">
               Read more{" "}
               <Image src={assets.right_arrow} alt="" className="w-4" />
-            </a>
+            </a> */}
           </motion.div>
         ))}
       </motion.div>
