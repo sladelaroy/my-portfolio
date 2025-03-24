@@ -94,27 +94,33 @@ export const assets = {
 
 export const workData = [
   {
+    title: "Edemy",
+    description: "MERN Project",
+    bgImage: "/edemy.jpg",
+    link: "https://edemy-lms-eta.vercel.app/"
+  },
+  {
     title: "Tech Store",
     description: "Next.js Project",
-    bgImage: "/work4.png", 
+    bgImage: "/tech_store.jpg", 
     link: "https://quick-cart-two-ochre.vercel.app/"
   },
   {
     title: "Fashion Shop",
     description: "MERN Project",
-    bgImage: "/work2.png",
+    bgImage: "/fashion_store.jpg",
     link: "https://forever-frontend-drab.vercel.app/"
   },
   {
     title: "Food Delivery",
     description: "MERN Project",
-    bgImage: "/work3.png",
+    bgImage: "/food_delivery.jpg",
     link: "https://food-delivery-wine-theta.vercel.app/"
   },
   {
     title: "Workout buddy",
     description: "MERN Project",
-    bgImage: "/work1.png",
+    bgImage: "/workout_buddy.jpg",
     link: "https://workout-buddy-azure.vercel.app/"
   }
 ];
@@ -165,7 +171,7 @@ export const infoList = [
     icon: assets.edu_icon,
     iconDark: assets.edu_icon_dark,
     title: "Education",
-    description: "Bachelor’s Degree (Ongoing)"
+    description: "Bachelor’s Degree"
   },
   {
     icon: assets.project_icon,
