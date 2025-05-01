@@ -13,7 +13,7 @@ const Header = () => {
         whileInView={{ scale: 1 }}
         transition={{ duration: 0.8, type: "spring", stiffness: 100 }}
       >
-        <Image className="rounded-full w-32" alt="" src="/profile.webp" />
+        <Image className="rounded-full h-full w-32" alt="" src="/profile.webp" width='128' height='128'/>
       </motion.div>
       <motion.h3
         initial={{ y: -20, opacity: 0 }}
@@ -30,7 +30,7 @@ const Header = () => {
         transition={{ duration: 0.8, delay: 0.3 }}
         className="text-3xl sm:text-6xl lg:text-[66px] font-Ovo"
       >
-        fullstack web developer
+        frontend/fullstack web & mobile developer
       </motion.h1>
       <motion.p
         initial={{ opacity: 0 }}
@@ -38,7 +38,7 @@ const Header = () => {
         transition={{ duration: 0.6, delay: 0.7 }}
         className="max-w-2xl mx-auto font-Ovo "
       >
-        a frontend/fullstack developer with a passion for creating pixel-perfect, responive and optimized websites/apps
+        I'm a frontend/fullstack developer with 4 years of experience and a passion for creating pixel-perfect, responsive, scalable and optimized web and mobile apps
       </motion.p>
       <div className="flex flex-col sm:flex-row items-center gap-4 mt-4">
         <motion.a
@@ -46,7 +46,7 @@ const Header = () => {
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.6, delay: 1.2 }}
           href="#contact"
-          className="px-10 py-3 border border-white rounded-full bg-black text-white flex items-center gap-2 dark:bg-transparent"
+          className="px-10 py-3 border border-white rounded-full bg-black text-white flex items-center gap-2 dark:bg-darkHover"
         >
           contact me
           <Image className="w-4" alt="" src={assets.right_arrow_white} />

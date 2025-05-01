@@ -12,7 +12,7 @@ export default {
     extend: {
       colors: {
         lightHover: "#fcf4ff",
-        darkHover: "#2a004a",
+        darkHover: "#18002b",
         darkTheme: "#11001f"
       },
       fontFamily: {
@@ -29,5 +29,5 @@ export default {
     }
   },
   darkMode: 'selector',
-  plugins: []
+  plugins: [ require('@tailwindcss/line-clamp'),]
 };

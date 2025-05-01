@@ -53,7 +53,7 @@ const Contact = () => {
         Get in touch
       </motion.h2>
       <p className="text-center max-w-2xl mx-auto mt-5 mb-12 font-Ovo">
-        I'd love to hear from you! If you have any questions, comments, or
+        I'd love to hear from you! If you have any projects you want me to work on, or if you have questions, comments, or
         feedback, please use the form below.
       </p>
 

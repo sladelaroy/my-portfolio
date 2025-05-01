@@ -5,3 +5,11 @@
 * {
   font-family: Outfit;
 }
+
+/* Override the carousel wrappers to allow overflow */
+.alice-carousel__wrapper {
+  overflow: visible !important;
+}
+.hrhrh{
+  background-color: #18002b
+}

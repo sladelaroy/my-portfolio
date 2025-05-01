@@ -43,6 +43,7 @@ import webIcon_dark from "./webIconDark.png";
 import api_icon_dark from "./apiIconDark.png";
 import database_icon_dark from "./databaseIconDark.png";
 import deployment_icon_dark from "./deploymentIconDark.png";
+import React from "react";
 
 export const assets = {
   user_image,
@@ -95,43 +96,52 @@ export const assets = {
 export const workData = [
   {
     title: "Edemy",
-    description: "MERN Project",
-    bgImage: "/edemy.jpg",
-    link: "https://edemy-lms-eta.vercel.app/"
+    description:
+      "Built a full-featured LMS using the MERN stack with secure authentication, real-time progress tracking, and video streaming integration for courses. ",
+    thumbnail: "/edemy.jpg",
+    link: "https://edemy-lms-eta.vercel.app/",
+    technologies: "React.js, Javascript, TailwindCSS, Express, Node.js, MongoDB, Clerk, Stripe"
   },
   {
     title: "Tech Store",
-    description: "Next.js Project",
-    bgImage: "/tech_store.jpg", 
-    link: "https://quick-cart-two-ochre.vercel.app/"
-  },
-  {
-    title: "Fashion Shop",
-    description: "MERN Project",
-    bgImage: "/fashion_store.jpg",
-    link: "https://forever-frontend-drab.vercel.app/"
+    description:
+      "Developed an e-commerce platform for electronics with clerk for easy user management, and Next.js for SEO friendliness and scalability.",
+    thumbnail: "/tech_store.jpg",
+    link: "https://quick-cart-two-ochre.vercel.app/",
+    technologies: "Next.js, Clerk, Javascript, TailwindCSS, MongoDB, Stripe"
   },
   {
     title: "Food Delivery",
-    description: "MERN Project",
-    bgImage: "/food_delivery.jpg",
-    link: "https://food-delivery-wine-theta.vercel.app/"
+    description:
+      "Built a food delivery platform using the MERN stack with order tracking, payment gateway integration, and a responsive UI.",
+    thumbnail: "/food_delivery.jpg",
+    link: "https://food-delivery-wine-theta.vercel.app/",
+    technologies: "React.js, TailwindCSS, Javascript, TailwindCSS, Express, Node.js, MongoDB, Stripe"
   },
   {
-    title: "Workout buddy",
-    description: "MERN Project",
-    bgImage: "/workout_buddy.jpg",
-    link: "https://workout-buddy-azure.vercel.app/"
-  }
+    title: "Fashion Shop",
+    description:
+      "Developed a complete e-commerce platform with secure authentication, product filtering, and Stripe payment integration.",
+    thumbnail: "/fashion_store.jpg",
+    link: "https://forever-frontend-drab.vercel.app/",
+    technologies: "React.js, Express, Node.js, MongoDB, Stripe"
+  },
+  // {
+  //   title: "Workout buddy",
+  //   description: "MERN Project",
+  //   thumbnail: "/workout_buddy.jpg",
+  //   link: "https://workout-buddy-azure.vercel.app/",
+  //   technologies: "React.js"
+  // }
 ];
 
 export const serviceData = [
   {
     icon: assets.webIcon,
     iconDark: assets.webIcon_dark,
-    title: "Web Application Development:",
+    title: "Web & Mobile App Development",
     description:
-      "Designing and building dynamic web applications using front-end and back-end technologies, ensuring a seamless user experience.",
+      "Designing and building dynamic applications using front-end and back-end technologies, ensuring a seamless user experience.",
     link: ""
   },
   {
@@ -164,8 +174,9 @@ export const infoList = [
   {
     icon: assets.code_icon,
     iconDark: assets.code_icon_dark,
-    title: "Languages",
-    description: "HTML, CSS, JavaScript React Js, Next Js"
+    title: "Technologies and Languages",
+    description:
+      "React, Next.js, Node.js, Express.js, MongoDB, PostgreSQL"
   },
   {
     icon: assets.edu_icon,

@@ -7,18 +7,22 @@ import Work from "./components/Work";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import { useEffect, useState } from "react";
+import FloatingIcons from "./components/FloatingIcons";
 
 export default function Home() {
   const [isDarkMode, setIsDarkMode] = useState(false);
 
   useEffect(() => {
-    if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('prefers-color-scheme: dark').matches)) {
-      setIsDarkMode(true)
+    if (
+      localStorage.theme === "dark" ||
+      (!("theme" in localStorage) &&
+        window.matchMedia("prefers-color-scheme: dark").matches)
+    ) {
+      setIsDarkMode(true);
     } else {
-      setIsDarkMode(false)
-
+      setIsDarkMode(false);
     }
-  }, [])
+  }, []);
 
   useEffect(() => {
     if (isDarkMode) {
@@ -29,8 +33,10 @@ export default function Home() {
       localStorage.theme = "";
     }
   }, [isDarkMode]);
+
   return (
-    <>
+    <div className="relative min-h-screen">
+      <FloatingIcons />
       <Navbar isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
       <Header isDarkMode={isDarkMode} />
       <About isDarkMode={isDarkMode} />
@@ -38,6 +44,6 @@ export default function Home() {
       <Work isDarkMode={isDarkMode} />
       <Contact isDarkMode={isDarkMode} />
       <Footer isDarkMode={isDarkMode} />
-    </>
+    </div>
   );
 }
