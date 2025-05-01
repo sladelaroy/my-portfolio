@@ -33,9 +33,8 @@ export default function Home() {
       localStorage.theme = "";
     }
   }, [isDarkMode]);
-
   return (
-    <div className="relative min-h-screen">
+    <>
       <FloatingIcons />
       <Navbar isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
       <Header isDarkMode={isDarkMode} />
@@ -44,6 +43,6 @@ export default function Home() {
       <Work isDarkMode={isDarkMode} />
       <Contact isDarkMode={isDarkMode} />
       <Footer isDarkMode={isDarkMode} />
-    </div>
+    </>
   );
 }

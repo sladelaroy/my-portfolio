@@ -13,7 +13,9 @@ const Header = () => {
         whileInView={{ scale: 1 }}
         transition={{ duration: 0.8, type: "spring", stiffness: 100 }}
       >
-        <Image className="rounded-full h-full w-32" alt="" src="/profile.webp" width='128' height='128'/>
+        <Image className="rounded-full h-full w-32" alt="" src="/profile.webp" 
+        width='128' height='128'
+        />
       </motion.div>
       <motion.h3
         initial={{ y: -20, opacity: 0 }}
