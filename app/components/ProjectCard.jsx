@@ -18,7 +18,6 @@ import { motion } from "motion/react";
 import React from "react";
 
 const ProjectCard = ({ project }) => {
-  // Create a mapping for technologies and their corresponding icon components and Tailwind classes
   const technologyIcons = [
     { name: "React", icon: FaReact, className: "text-blue-500" },
     { name: "Node.js", icon: FaNodeJs, className: "text-green-500" },
@@ -31,7 +30,6 @@ const ProjectCard = ({ project }) => {
     { name: "MongoDB", icon: SiMongodb, className: "text-green-600" },
     { name: "PostgreSQL", icon: SiPostgresql, className: "text-blue-700" },
     { name: "Prisma", icon: SiPrisma, className: "text-pink-500" },
-    // For React Native, using the React icon as a fallback with alternate color
     { name: "React Native", icon: FaReact, className: "text-blue-400" },
     { name: "Expo", icon: SiExpo, className: "text-black" },
     { name: "Appwrite", icon: SiAppwrite, className: "text-blue-800" },
@@ -52,17 +50,18 @@ const ProjectCard = ({ project }) => {
         className="w-full h-48 object-cover rounded"
       />
       <h3 className="text-sm font-bold mt-4 sm:text-base">{project.title}</h3>
-      <p className="text-gray-600 dark:text-gray-400 mt-2 sm:text-sm text-xs line-clamp-4 sm:line-clamp-4">
+
+      {/* Adjusted description with line-clamp for 4 lines on desktop, 3 on mobile */}
+      <p className="text-gray-600 dark:text-gray-400 mt-2 sm:text-sm text-xs line-clamp-4 sm:line-clamp-3">
         {project.description}
       </p>
+
       <div className="flex items-center mt-4 space-x-2">
         {technologyIcons.map((tech) => {
-          // Only render if the project includes this technology
           if (project.technologies.includes(tech.name)) {
-            // Get the icon component from the mapping.
             const IconComponent = tech.icon;
             return (
-              <div 
+              <div
                 key={tech.name}
                 className="border border-gray-500 rounded-full p-1 flex items-center justify-center"
               >
@@ -73,6 +72,7 @@ const ProjectCard = ({ project }) => {
           return null;
         })}
       </div>
+
       <a
         href={project.link}
         target="_blank"
